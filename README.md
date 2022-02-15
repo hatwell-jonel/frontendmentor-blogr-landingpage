@@ -63,7 +63,7 @@ The designs were created to the following widths:
 
 ### Links
 
-- Solution URL: [Click here](https://your-solution-url.com)
+- Solution URL: [Click here](https://www.frontendmentor.io/solutions/mobile-first-scss-bootstrap-javascript-YUKTB9YBw)
 - Live Site URL: [Click here](https://hatwell-jonel.github.io/frontendmentor-blogr-landingpage/)
 
 
