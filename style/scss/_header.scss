@@ -1,0 +1,363 @@
+.header {
+  height: auto;
+  background: linear-gradient(
+      120deg,
+      rgba(255, 143, 112, 0.8),
+      rgba(255, 61, 84, 1)
+    ),
+    url(./../../images/bg-pattern-intro.svg) no-repeat;
+  background-size: 300%;
+  background-position: center;
+  border-radius: 0px 0px 0px 90px;
+
+  .nav {
+    position: relative;
+    .icon {
+      cursor: pointer;
+      height: 30px;
+      width: 40px;
+
+      // RESPONSIVE
+      @include breakpoint(md) {
+        display: none;
+      }
+
+      .hamburger {
+        background: url(./../../images/icon-hamburger.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        // transform: rotate(180deg);x
+        transition: 0.3s linear;
+      }
+
+      .close {
+        background: url(./../../images/icon-close.svg) no-repeat;
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+      }
+    }
+
+    .nav-menu {
+      position: absolute;
+      z-index: 100;
+      width: 100%;
+      height: auto;
+      margin-top: 1rem;
+      top: 3rem;
+      padding: 1.5rem 1rem;
+
+      background-color: $white;
+      border-radius: 5px;
+      box-shadow: 2px -1px 16px -5px rgba(85, 42, 42, 0.58);
+
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.3s ease-in-out;
+
+      // RESPONSIVE
+      @include breakpoint(md) {
+        position: relative;
+        opacity: 1;
+        visibility: visible;
+        background-color: transparent;
+        box-shadow: none;
+        top: initial;
+        margin-top: 0;
+        padding: 0rem;
+        display: flex;
+        width: 83%;
+      }
+      // RESPONSIVE
+      @include breakpoint(lg) {
+        width: 89%;
+      }
+
+      // RESPONSIVE
+      @include breakpoint(xxl) {
+        width: 91%;
+      }
+
+      &__item {
+        margin-bottom: 0.7rem;
+        position: relative;
+
+        // RESPONSIVE
+        @include breakpoint(md) {
+          margin-right: 0.5rem;
+          display: flex;
+          align-items: center;
+        }
+
+        .title {
+          font-family: "ubuntu", sans-serif;
+          color: $Very-dark-blue;
+          cursor: pointer;
+          text-align: center;
+
+          // RESPONSIVE
+          @include breakpoint(md) {
+            color: $white;
+
+            span {
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          // RESPONSIVE
+          @include breakpoint(xxl) {
+            font-size: 1.2rem;
+          }
+
+          .angle-down {
+            i {
+              color: $Light-red;
+              transition: transform 0.3s linear;
+
+              // RESPONSIVE
+              @include breakpoint(md) {
+                color: $white;
+              }
+              // RESPONSIVE
+              @include breakpoint(xxl) {
+                font-size: 1.2rem;
+              }
+            }
+          }
+        }
+
+        .links {
+          display: none;
+          padding: 1.5rem 1rem;
+          border-radius: 5px;
+          margin-top: 1rem;
+          background-color: lighten($Grayish-blue, 10%);
+
+          // RESPONSIVE
+          @include breakpoint(md) {
+            position: absolute;
+            top: 1rem;
+            background-color: $white;
+            padding: 1rem 1.1rem;
+          }
+
+          li {
+            font-family: "overpass", sans-serif;
+            font-weight: 500;
+            text-align: center;
+            margin-bottom: 0.3rem;
+
+            // RESPONSIVE
+            @include breakpoint(md) {
+              margin-bottom: 0.7rem;
+              text-align: left;
+              margin-bottom: 0rem;
+
+              &:last-child {
+                margin-bottom: 0rem;
+              }
+            }
+
+            a {
+              text-decoration: none;
+              color: $Very-dark-grayish-blue;
+
+              // RESPONSIVE
+              @include breakpoint(md) {
+                &:hover {
+                  font-weight: 600;
+                }
+              }
+              // RESPONSIVE
+              @include breakpoint(xxl) {
+                font-size: 1.1rem;
+              }
+            }
+          }
+        }
+      }
+
+      .buttons {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // RESPONSIVE
+        @include breakpoint(md) {
+          flex-direction: row;
+          right: 0;
+          position: absolute;
+          width: 270px;
+          top: -10px;
+        }
+
+        a {
+          display: block;
+          margin-bottom: 0.5rem;
+          padding: 0.5rem 1rem;
+          width: 50%;
+          border-radius: 50px;
+          font-family: "ubuntu", sans-serif;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          // RESPONSIVE
+          @include breakpoint(md) {
+            margin-right: 0.5rem;
+            margin-bottom: 0rem;
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+          // RESPONSIVE
+          @include breakpoint(xxl) {
+            font-size: 1.2rem;
+          }
+        }
+
+        .login {
+          color: $Very-dark-blue;
+
+          &:hover {
+            border: 2px solid $Light-red;
+          }
+
+          // RESPONSIVE
+          @include breakpoint(md) {
+            color: $white;
+            width: 100%;
+            font-weight: 600;
+
+            &:hover {
+              border: 1px solid $white;
+            }
+          }
+        }
+
+        .sign-up {
+          color: $white;
+          background: linear-gradient(to right, $Very-light-red, $Light-red);
+
+          // RESPONSIVE
+          @include breakpoint(md) {
+            color: $Light-red;
+            font-weight: 600;
+            background: $white;
+            width: 100%;
+
+            &:hover {
+              background: $Very-light-red;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-show {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .show-links {
+      .angle-down {
+        i {
+          transform: rotate(180deg);
+        }
+      }
+
+      .links {
+        display: block;
+      }
+    }
+  }
+
+  .text {
+    font-family: "overpass", sans-serif;
+    position: relative;
+    // transform: translateY(30%);
+    text-align: center;
+    color: $white;
+    margin: 7rem 0rem;
+
+    h1 {
+      font-size: 2.1rem;
+      font-weight: 600;
+
+      // RESPONSIVE
+      @include breakpoint(md) {
+        font-size: 2.3rem;
+      }
+
+      // RESPONSIVE
+      @include breakpoint(md) {
+        font-size: 2.8rem;
+      }
+    }
+
+    p {
+      color: darken($white, 10%);
+
+      // RESPONSIVE
+      @include breakpoint(md) {
+        margin-top: 0.7rem;
+      }
+      // RESPONSIVE
+      @include breakpoint(xxl) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .buttons {
+      // RESPONSIVE
+      @include breakpoint(md) {
+        margin-top: 1.3rem;
+      }
+
+      a {
+        border-radius: 50px;
+        margin-right: 0.5rem;
+        padding: 0.5rem 1.1rem;
+        &:last-child {
+          margin-right: 0rem;
+        }
+
+        // RESPONSIVE
+        @include breakpoint(xxl) {
+          font-size: 1.2rem;
+        }
+      }
+
+      .btn1 {
+        color: $Light-red;
+        font-weight: 600;
+        background-color: $white;
+        transition: 0.3s linear;
+        &:hover {
+          background-color: $Very-light-red;
+          color: $white;
+        }
+      }
+
+      .btn2 {
+        border: 1px solid $white;
+        color: $white;
+        font-weight: 600;
+        padding: 0.5rem 1.5rem;
+        transition: 0.3s linear;
+        &:hover {
+          background-color: $white;
+          color: $Very-light-red;
+        }
+      }
+    }
+  }
+}

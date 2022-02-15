@@ -1,0 +1,118 @@
+.section{
+  position: relative;
+  text-align: center;
+  font-family: "overpass", sans-serif;
+  padding: 3rem 0rem;
+
+  @include breakpoint(lg){
+    padding: 10rem 0rem;
+  }
+
+  .section-title{
+    font-size: 1.500rem;
+    line-height: 0;
+    font-weight: 600;
+    color: $Very-dark-desaturated-blue;
+
+    @include breakpoint(lg){
+      margin-bottom: 8rem;
+      font-size: 1.800rem;
+    }
+  }
+
+  .container{
+
+    &__left{
+      
+      @include breakpoint(lg){
+        width: 50%;
+      }
+      .editor-desktop{
+        top: 0;
+      }
+
+      .laptop-desktop{
+        left: -17.1rem;
+        top: 0;
+      }
+    }
+
+    &__right{
+       h3{
+        // font-size: 1.500rem;
+        font-size: clamp(1.500rem, 6vw, 1.700rem );
+        line-height: 1.1;
+        color: $Very-dark-desaturated-blue;
+      }
+      p{
+        // font-size: 0.875rem;
+        font-size: clamp(0.875rem, 6vw, 1rem);
+        line-height: 2.250;
+        color: $Very-dark-grayish-blue;
+      }
+
+      @include breakpoint(lg){
+        width: 50%;
+        text-align: left;
+      }
+    } 
+  }
+
+
+}
+
+.section-2{
+  border-radius: 0px 90px 0px 90px;
+  background: url(../../images/bg-pattern-circles.svg), linear-gradient($Very-dark-gray-blue, $Very-dark-desaturated-blue);
+  background-repeat: no-repeat;
+  background-position: -100px -200px,0% 0%;
+  background-size: 150%;
+  margin-top: 9rem;
+  height: 700px;
+
+  @include breakpoint(sm){
+   height: 750px;
+   background-size: 120%;
+  background-position: -100px -300px,0% 0%;
+}
+
+  @include breakpoint(lg){
+    height: 420px;
+    margin: 5rem 0rem 2rem;
+
+  background-position: -500px -800px,0% 0%;
+  background-size: 100%;
+
+  }
+
+  .container{
+    &__left{
+      .phones{
+        position: relative;
+        top: -13rem;
+      }
+    }
+
+    &__right{
+      position: relative;
+      top: -12rem;
+      @include breakpoint(lg){
+        top: 0;
+      }
+      h3{
+        font-size: clamp(2.1rem, 6vw, 2.2rem);
+        color: $white;
+      }
+      p{
+        color: darken($white, 20%);
+      }
+    }
+  }
+}
+
+.section-3{
+  padding: 0;
+  @include breakpoint(lg){
+    padding-top: 13rem;
+  }
+}

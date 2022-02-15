@@ -1,0 +1,82 @@
+.footer {
+  background-color: $Very-dark-black-blue;
+  padding: 3rem 0rem;
+  border-radius: 0px 90px 0px 0px;
+  font-family: "overpass", sans-serif;
+  margin-top: 4rem;
+
+  @include breakpoint(lg) {
+    margin-top: 18rem;
+  }
+
+  .container {
+    img {
+      margin-bottom: 4.5rem;
+
+      @include breakpoint(md) {
+        height: 40px;
+        margin-right: 5rem;
+      }
+
+      @include breakpoint(lg) {
+        margin-right: 12rem;
+      }
+    }
+    @include breakpoint(md) {
+      display: flex;
+    }
+    .nav-menu {
+      @include breakpoint(md) {
+        display: flex;
+      }
+      &__item {
+        margin-bottom: 2.5rem;
+        @include breakpoint(md) {
+          margin-bottom: 0rem;
+        }
+        &:last-child {
+          margin-bottom: 0rem;
+        }
+
+        @include breakpoint(md) {
+          text-align: left;
+          padding-top: 0.5rem;
+          margin-right: 4rem;
+        }
+
+        @include breakpoint(lg) {
+          margin-right: 8rem;
+
+          &:last-child {
+            margin-right: 0rem;
+          }
+        }
+        .title {
+          span {
+            color: $white;
+          }
+        }
+        .links {
+          padding: 0;
+          text-align: center;
+          @include breakpoint(md) {
+            text-align: left;
+          }
+
+          li {
+            margin-bottom: 0.3rem;
+            a {
+              font-family: "ubuntu", sans-serif;
+              color: $Grayish-blue;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
