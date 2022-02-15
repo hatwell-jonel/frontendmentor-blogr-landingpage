@@ -64,7 +64,7 @@ The designs were created to the following widths:
 ### Links
 
 - Solution URL: [Click here](https://your-solution-url.com)
-- Live Site URL: [Click here](https://your-live-site-url.com)
+- Live Site URL: [Click here](https://hatwell-jonel.github.io/frontendmentor-blogr-landingpage/)
 
 
 ### Built with
